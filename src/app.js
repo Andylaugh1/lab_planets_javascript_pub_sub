@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputView = new InputView();
 
   inputView.getPlanetSelection()
+  planetsDataModel.publishPlanetDetails()
 
 
 
