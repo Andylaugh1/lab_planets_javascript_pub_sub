@@ -4,7 +4,10 @@ const SolarSystem = function(planets) {
   this.planets = planets;
 };
 
-SolarSystem.prototype.publishPlanetDetails = function () {
+SolarSystem.prototype.publishPlanetDetails = function (name) {
+  const selectedPlanet = this.planets[name];
+  console.log(selectedPlanet);
+  PubSub.publish('InputView:selectedItem', selectedPlanet);
 
 };
 

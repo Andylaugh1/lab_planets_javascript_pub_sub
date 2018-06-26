@@ -8,9 +8,8 @@ InputView.prototype.getPlanetSelection = function () {
   console.log(menuListItems);
   for (item of menuListItems) {
     item.addEventListener('click', (event) => {
-      console.log(event.target.id);
-
-
+      const selectedItem = event.target.id;
+      PubSub.publish('InputView:selectedItem', selectedItem);
     })
   }
 
