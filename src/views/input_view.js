@@ -4,11 +4,16 @@ const InputView = function () {
 
 }
 InputView.prototype.getPlanetSelection = function () {
-  const nav = document.querySelector(".planets-menu");
-  nav.addEventListener('click', (event) => {
-    const selectedPlanet = event.target.li.value;
-    PubSub.publish("InputView:selection" ,selectedPlanet);
-  })
+  const menuListItems = document.querySelectorAll("li");
+  console.log(menuListItems);
+  for (item of menuListItems) {
+    item.addEventListener('click', (event) => {
+      console.log(event.target.id);
+
+
+    })
+  }
+
 
 };
 
